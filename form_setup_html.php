@@ -1,7 +1,6 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 
-<link rel="stylesheet" href="<?php echo $this->getBlockURL()?>/lib/codemirror.css" />
-<link rel="stylesheet" href="<?php echo $this->getBlockURL()?>/addon/hint/show-hint.css" />
+<link rel="stylesheet" href="<?php echo $this->getBlockURL()?>/lib/codemirror.min.css" />
 <script>
 var editor;
 (function() {
