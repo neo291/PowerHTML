@@ -1,7 +1,17 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
 
+$isDashboard = false;
+if (Page::getCurrentPage()->getCollectionPath() == "/dashboard/blocks/stacks") {
+$isDashboard = true;
+} 
+
+$isStacks = false;
+if (strpos(Page::getCurrentPage()->getCollectionPath(), '!stacks') !== FALSE) {
+$isStacks = true;
+}
+
 $c=Page::getCurrentPage();
-if ($c->isEditMode()) {
+if ($c->isEditMode() || $isDashboard || $isStacks) {
 	switch($preview) {
 		default:
 		case 0:
