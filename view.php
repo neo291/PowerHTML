@@ -12,6 +12,9 @@ $isStacks = true;
 
 $c=Page::getCurrentPage();
 if ($c->isEditMode() || $isDashboard || $isStacks) {
+	if ($visible != '1') {
+		echo '<div style="background:#f00;color:#fff;text-align:center;">*** Content not visible in production ***</div>';
+	}
 	switch($preview) {
 		default:
 		case 0:
@@ -26,5 +29,7 @@ if ($c->isEditMode() || $isDashboard || $isStacks) {
 	}
 }
 else {
-	echo $content;
+	if ($visible == '1') {
+		echo $content;
+	}
 }

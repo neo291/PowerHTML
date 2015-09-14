@@ -20,7 +20,10 @@ var editor;
 </script>
 
 <div class="ccm-ui">
-<strong><?php echo t('Preview type')?></strong> <?php
+<label style="display:inline-block;"><?php
+echo $form->checkbox('visible', '1', $visible == '1', array());
+?> Visible</label>
+ | <strong><?php echo t('Preview type')?></strong> <?php
 echo $form->select('preview', $controller->getPreviewOptions(), $preview, array(
 	'onchange' => "if($('#preview').val() == 2) { $('#previewtext').show() } else { $('#previewtext').hide() }"	
 ));
@@ -30,7 +33,8 @@ echo $form->text('previewtext', $previewtext, array(
 	'maxlength' => 180,
 	'style' => $preview == 2 ? '' : 'display:none;'
 ));  
-?><br /><br />
+?>
+<br />
 <?php
 echo $form->textarea('content', $content, array(
 	'style' => 'width:98%;height:375px'

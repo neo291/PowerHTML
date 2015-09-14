@@ -13,5 +13,8 @@
 		<field name="previewtext" type="C" size="180">
 			<default value=""/>
 		</field>
+		<field name="visible" type="L">
+			<default value="1"/>
+		</field>
 	</table>
 </schema>
