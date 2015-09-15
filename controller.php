@@ -10,7 +10,7 @@ class PowerHtmlBlockController extends BlockController {
 	protected $btCacheBlockRecord = true;
 	protected $btCacheBlockOutput = true;
 	protected $btCacheBlockOutputOnPost = true;
-	protected $btCacheBlockOutputForRegisteredUsers = true;
+	protected $btCacheBlockOutputForRegisteredUsers = false;
 
 	function getPreviewOptions() {
 		return array(0 => 'Full HTML', 1 => 'Content only', 2 => 'Dummy text');
